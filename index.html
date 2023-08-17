@@ -31,11 +31,23 @@
     <div class="backgroundParty">
         <audio id="myAudio" controls autoplay loop>
 
-            <source src="C:/Users/Dell/thuongpromcn.github.io/img/happy-birthday-155461.mp3" type="audio/mpeg">
+            <source src="D:/HPBD/img/happy-birthday-155461.mp3" type="audio/mpeg">
 
 
 
         </audio>
+      <button id="playButton">Phát âm thanh</button>
+
+      <script>
+        var audio = document.getElementById("myAudio");
+        var playButton = document.getElementById("playButton");
+      
+        playButton.addEventListener("click", function() {
+          audio.play().catch(function(error) {
+            console.error("Lỗi khi phát âm thanh:", error);
+          });
+        });
+      </script>
       
         <img class="balloon1 balloon" src="./img/PNGkhothietke.net-02776.png" alt="">
         <img class="balloon2 balloon" src="./img/PNGkhothietke.net-02776.png" alt="">
